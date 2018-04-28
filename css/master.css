@@ -1,0 +1,165 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+li{
+  list-style-type: none;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: green;
+}
+
+/* --------- NAV --------- */
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  box-shadow: 1px 1px 5px #0F0;
+  background-color: #333333;
+  padding-top: 5px;
+}
+
+nav ul{
+  width: 660px;
+  padding-top: 5px;
+  margin: auto;
+}
+
+nav ul a{
+  padding: 10px 20px 15px 20px;
+  font-size: 25px;
+}
+
+nav ul a:hover, .productos .link-productos:hover{
+  color: #000;
+  background: #5F5;
+}
+
+/* ---------- HEADER ----------- */
+
+header img{
+  width: 100%;
+}
+
+/* --------- CONTENIDO PRINCIPAL ------------ */
+
+main .productos{
+  float:left;
+  width: 25%;
+  background-color: white;
+}
+
+.link-productos{
+  background-color: #333333;
+  text-align: center;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.teclados, .detalles {
+  margin-bottom: 100px;
+  padding: 20px 0;
+}
+
+.teclados .teclado, .detalles .detalle{
+  border-bottom: 2px solid green;
+  margin-bottom: 30px;
+}
+
+.teclados li img, .detalles li img{
+  width: 100%;
+}
+
+.thumbnail-text{
+  width: 70%;
+  margin: 20px 0;
+}
+
+.table-tittle{
+  text-align: center;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+/* ---------- FOOTER ----------- */
+
+footer{
+  clear: left;
+  height: 300px;
+  padding-top: 50px;
+}
+
+footer form{
+    width: 30%;
+    border-radius: 5px;
+    background-color: #333333;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#contacto #email, #contacto #comentario{
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #45a049;
+}
