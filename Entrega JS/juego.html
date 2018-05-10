@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Juego de la memoria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/juego.css">
+  </head>
+  <body>
+    <label for="Probabilidad">Probabilidad de Marca</label>
+    <input id='Probabilidad' type="number" placeholder="Valor entre 0 y 1" name="Probabilidad" value="0.5">
+    <button id='Jugar' type="button" name="comienzo">Empezar</button>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>A</th>
+          <td><i id= 'A1' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'A2' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'A3' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'A4' class="fa" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <th>B</th>
+          <td><i id= 'B1' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'B2' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'B3' class="fa" aria-hidden="true"></i></td>
+          <td><i id= 'B4' class="fa" aria-hidden="true"></i></td>
+        </tr>
+      </tbody>
+    </table>
+    <label for="Eleccion">Elegir casillero</label>
+    <input id='Eleccion' type="text" name="Eleccion" placeholder="Ejemplo: A1" value="">
+    <button id='EnviarEleccion' type="button" name="">Enviar</button>
+    <script type="text/javascript" src="js/juego.js"></script>
+  </body>
+</html>
