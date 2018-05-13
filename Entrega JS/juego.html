@@ -7,39 +7,72 @@
     <link rel="stylesheet" href="css/juego.css">
   </head>
   <body>
-    <label for="Probabilidad">Probabilidad de Marca</label>
-    <input id='Probabilidad' type="number" placeholder="Valor entre 0 y 1" name="Probabilidad" value="0.5">
-    <button id='Jugar' type="button" name="comienzo">Empezar</button>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-          <th>4</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>A</th>
-          <td><i id= 'A1' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'A2' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'A3' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'A4' class="fa" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-          <th>B</th>
-          <td><i id= 'B1' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'B2' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'B3' class="fa" aria-hidden="true"></i></td>
-          <td><i id= 'B4' class="fa" aria-hidden="true"></i></td>
-        </tr>
-      </tbody>
-    </table>
-    <label for="Eleccion">Elegir casillero</label>
-    <input id='Eleccion' type="text" name="Eleccion" placeholder="Ejemplo: A1" value="">
-    <button id='EnviarEleccion' type="button" name="">Enviar</button>
+    <header>
+      <h1>Juego de la memoria</h1>
+    </header>
+    <main>
+      <section>
+        <table id="tablaJuego">
+          <thead>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i id= '1' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '2' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '3' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '4' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '5' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '6' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '7' class="fa" aria-hidden="true"></i></td>
+              <td><i id= '8' class="fa" aria-hidden="true"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <aside>
+        <table id='Resultados'>
+          <thead>
+            <tr>
+              <td></td>
+              <td colspan="2">Resultados</td>
+            </tr>
+            <tr>
+              <td>Nº partida</td>
+              <td>Aciertos</td>
+              <td>Errores</td>
+            </tr>
+          </thead>
+          <tbody id='ResultadosBody'>
+          </tbody>
+        </table>
+      </aside>
+    </main>
+    <footer>
+      <div class="Opciones">
+        <label for="Eleccion">Elegir casillero</label>
+        <input id='Eleccion' type="number" name="Eleccion" placeholder="Introducir número" value="">
+        <button id='EnviarEleccion' type="submit" name="">Enviar</button>
+      </div>
+      <div class="Opciones">
+        <label for="Timer">Modificar tiempo en el que se ocultan las marcas</label>
+        <input id='Timer' type="number" name="Timer" placeholder="Introducir demora en milisegundos" value="1000">
+      </div>
+      <div class="Opciones">
+        <label for="Probabilidad">Probabilidad de Marca</label>
+        <input id='Probabilidad' type="number" placeholder="Valor entre 0 y 1" name="Probabilidad" value="0.5">
+        <button id='Jugar' type="submit" name="comienzo">Empezar</button>
+      </div>
+    </footer>
     <script type="text/javascript" src="js/juego.js"></script>
   </body>
 </html>
