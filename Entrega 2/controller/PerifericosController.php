@@ -18,20 +18,25 @@ class PerifericosController {
     $this->perifericosView->mostrarPerifericos($perifericos);
   }
 
-  function crearPeriferico($params = [])
+  function crearPeriferico()
   {
-    $this->perifericosView->mostrarVistaCrearPeriferico();
+    $tiposPerifericos = $this->perifericosModel->obtenerTiposPerifericos();
+    $this->perifericosView->mostrarVistaCrearPeriferico($tiposPerifericos);
   }
 
-  function guardarPeriferico($params = [])
+  function guardarPeriferico()
   {
-    $periferico = [
-      'id' => $_POST['id'],
-      'descripcion' => $_POST['descripcion'],
-      'marca' => $_POST['marca']
-    ];
+    $periferico = array($_POST['Titulo'], $_POST['Descripcion'], $_POST['Marca'], $_POST['id']);
     $this->perifericosModel->insertarPeriferico($periferico);
     PageHelpers::homePage();
+  }
+
+  function editarPeriferico(){
+    $periferico = array($_POST['Titulo'], $_POST['Descripcion'], $_POST['Marca'], (int)$_POST['id_tipo'], (int)$_POST['id_periferico']);
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+    // $this->perifericosModel->editarPeriferico($periferico);
   }
 
   function borrarPeriferico($params = [])
@@ -44,7 +49,8 @@ class PerifericosController {
   {
     $periferico = $this->perifericosModel->obtenerPeriferico($params[0]);
     $tipoPeriferico = $this->perifericosModel->obtenerTipoPeriferico($periferico['id_tipo']);
-    $this->perifericosView->mostrarDetalle($periferico, $tipoPeriferico);
+    $tiposPerifericos = $this->perifericosModel->obtenerTiposPerifericos();
+    $this->perifericosView->mostrarDetalle($periferico, $tipoPeriferico, $tiposPerifericos);
   }
 }
  ?>

@@ -1,7 +1,7 @@
 <?php
   DEFINE('BASEURL','//'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
   require_once "config.php";
-//  require_once "./helpers/PageHelpers.php";
+  require_once "helpers/PageHelpers.php";
   require_once "controller/PerifericosController.php";
 //  require_once "controller/LoginController.php";
 

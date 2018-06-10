@@ -7,6 +7,7 @@ $acciones = [
   "ver" => "PerifericosController#mostrarPerifericos",
   "crear" => "PerifericosController#crearPeriferico",
   "guardar" => "PerifericosController#guardarPeriferico",
+  "editar" => "PerifericosController#editarPeriferico",
   "borrar" => "PerifericosController#borrarPeriferico",
   "detalle" => "PerifericosController#mostrarDetalle"
 ];
