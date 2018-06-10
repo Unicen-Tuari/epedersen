@@ -18,10 +18,11 @@ class PerifericosView{
     $this->smarty->display("crearPeriferico.tlp");
   }
 
-  function MostrarDetalle($periferico){
-    $this->smarty->assign('id', $tarea['id']);
-    $this->smarty->assign('descripcion', $tarea['descripcion']);
-    $this->smarty->assign('marca', $tarea['marca']);
+  function mostrarDetalle($periferico, $tipo){
+    $this->smarty->assign('descripcion', $periferico['descripcion']);
+    $this->smarty->assign('marca', $periferico['marca']);
+    $this->smarty->assign('tipo', $tipo['nombre']);
+    $this->smarty->display('mostrarDetalle.tpl');
   }
 }
  ?>

@@ -1,3 +1,3 @@
-<h1>{$titulo}</h1>
+<h1>{$marca}</h1>
 <p>{$descripcion}</p>
-<h2>{$estado}</h2>
+<h2>{$tipo}</h2>

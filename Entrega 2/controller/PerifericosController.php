@@ -39,5 +39,12 @@ class PerifericosController {
     $this->perifericosModel->deletePeriferico($params[0]);
     PageHelpers::homePage();
   }
+
+  function mostrarDetalle($params = [])
+  {
+    $periferico = $this->perifericosModel->obtenerPeriferico($params[0]);
+    $tipoPeriferico = $this->perifericosModel->obtenerTipoPeriferico($periferico['id_tipo']);
+    $this->perifericosView->mostrarDetalle($periferico, $tipoPeriferico);
+  }
 }
  ?>
