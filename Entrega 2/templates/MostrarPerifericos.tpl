@@ -5,6 +5,7 @@
     <ul class="list-group">
       {foreach from=$perifericos item=periferico}
       <li class="list-group-item">
+        <a href="borrar/{$periferico['id']}" class="card-link"><button type="button" class="btn btn-primary btn-lg">Borrar</button></a>
         <a href="detalle/{$periferico['id']}" class="card-link">{$periferico['titulo']}</a>
       </li>
       {/foreach}

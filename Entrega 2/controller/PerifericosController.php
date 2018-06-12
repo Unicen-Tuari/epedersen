@@ -32,11 +32,9 @@ class PerifericosController {
   }
 
   function editarPeriferico(){
-    $periferico = array($_POST['Titulo'], $_POST['Descripcion'], $_POST['Marca'], (int)$_POST['id_tipo'], (int)$_POST['id_periferico']);
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
-    // $this->perifericosModel->editarPeriferico($periferico);
+    $periferico = array($_POST['Titulo'], $_POST['Descripcion'], $_POST['Marca'], $_POST['id_tipo'], $_POST['id_periferico']);
+    $this->perifericosModel->editarPeriferico($periferico);
+    PageHelpers::homePage();
   }
 
   function borrarPeriferico($params = [])

@@ -11,7 +11,7 @@
     <h1>Editar</h1>
   </div>
   <div class="card-body">
-    <form action="editar" method="post">
+    <form action="../editar" method="post">
       <div class="form-group">
         <label for="marca">Marca</label>
         <input type="text" class="form-control" name="Marca" value="{$marca}" placeholder="Marca">

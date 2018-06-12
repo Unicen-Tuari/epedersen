@@ -26,7 +26,6 @@ class PerifericosView{
     $this->smarty->assign('id_tipo', $periferico['id_tipo']);
 
     $this->smarty->assign('tipo', $tipo);
-
     $this->smarty->assign("tipos", $tipos);
     $this->smarty->display('mostrarDetalle.tpl');
   }
