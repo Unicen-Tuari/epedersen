@@ -1,5 +1,14 @@
 {include file="header.tpl"}
       <div class="row">
+        <div class="col-md">
+          <nav class="nav ">
+            <a class="nav-link" href="perifericos">Perifericos</a>
+            <a class="nav-link" href="permisos">Permisos</a>
+            <a class="nav-link" href="logout">Logout</a>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-8 col-md-offset-2">
         {if !empty($user) }
           {foreach from=$user item=usuario}

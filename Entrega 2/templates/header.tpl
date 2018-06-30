@@ -12,6 +12,3 @@
     <div class="container">
       <div class="row">
         <div class="col-md">
-
-
-  <!-- <a href="logout">Logout</a> -->

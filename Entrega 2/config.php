@@ -10,11 +10,19 @@ $acciones = [
   "permisos" => "PermisosController#mostrarUsuarios",
   "actualizarUsuario" => "PermisosController#actualizarUsuario",
   "borrarUsuario" => "PermisosController#borrarUsuario",
-  "ver" => "PerifericosController#mostrarPerifericos",
-  "crear" => "PerifericosController#crearPeriferico",
-  "guardar" => "PerifericosController#guardarPeriferico",
-  "editar" => "PerifericosController#editarPeriferico",
-  "borrar" => "PerifericosController#borrarPeriferico",
-  "detalle" => "PerifericosController#mostrarDetalle"
+  "perifericos" => "PerifericosController#mostrarPerifericos",
+  "crearPeriferico" => "PerifericosController#crearPeriferico",
+  "guardarPeriferico" => "PerifericosController#guardarPeriferico",
+  "editarPeriferico" => "PerifericosController#editarPeriferico",
+  "borrarPeriferico" => "PerifericosController#borrarPeriferico",
+  "detalle" => "PerifericosController#mostrarDetalle",
+  "perifericosOrdenados" => "PerifericosController#listaOrdenada",
+  "categorias" => "CategoriaController#mostrarCategorias",
+  "crearCategoria" => "CategoriaController#crearCategoria",
+  "guardarCategoria" => "CategoriaController#guardarCategoria",
+  "editarCategoria" => "CategoriaController#editarCategoria",
+  "borrarCategoria" => "CategoriaController#borrarCategoria",
+  "detalleCategoria" => "CategoriaController#mostrarDetalleCategoria"
+
 ];
 ?>

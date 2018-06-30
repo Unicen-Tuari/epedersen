@@ -1,4 +1,12 @@
 {include file="header.tpl"}
+<div class="row">
+  <div class="col-md">
+    <nav class="nav ">
+      <a class="nav-link" href="perifericos">Periféricos</a>
+      <a class="nav-link" href="categorias">Categorías</a>
+    </nav>
+  </div>
+</div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <form action="verificarUsuario" method="post">

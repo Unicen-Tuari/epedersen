@@ -8,8 +8,10 @@ class PerifericosView{
     $this->smarty = new Smarty;
   }
 
-  function mostrarPerifericos($periferico){
+  function mostrarPerifericos($periferico, $tipo, $permiso){
     $this->smarty->assign("perifericos", $periferico);
+    $this->smarty->assign('tipo', $tipo);
+    $this->smarty->assign("permiso", $permiso);
     $this->smarty->display("MostrarPerifericos.tpl");
   }
 
@@ -18,7 +20,8 @@ class PerifericosView{
     $this->smarty->display("crearPeriferico.tpl");
   }
 
-  function mostrarDetalle($periferico, $tipo, $tipos){
+  function mostrarDetalle($periferico, $tipo, $tipos, $permiso){
+    $this->smarty->assign('permiso', $permiso);
     $this->smarty->assign('id_periferico', $periferico['id']);
     $this->smarty->assign('titulo', $periferico['titulo']);
     $this->smarty->assign('descripcion', $periferico['descripcion']);

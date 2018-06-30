@@ -18,12 +18,19 @@ class PermisosController extends SecuredController
       }
     }
     public function actualizarUsuario(){
-      $values = array($_POST['usuario'],(int)$_POST['admin'],(int)$_POST['id']);
-      $this->model->actualizarUsuario($values);
+      session_start();
+      if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
+        $values = array($_POST['usuario'],(int)$_POST['admin'],(int)$_POST['id']);
+        $this->model->actualizarUsuario($values);
+      }
+
       PageHelpers::PermisosPage();
     }
     public function borrarUsuario($params = []){
-      $this->model->borrarUsuario([$params[0]]);
+      session_start();
+      if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
+        $this->model->borrarUsuario([$params[0]]);
+      }
       PageHelpers::PermisosPage();
     }
 }

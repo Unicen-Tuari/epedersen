@@ -4,7 +4,7 @@ class PerifericosModel extends Model{
 
   function obtenerPerifericos()
   {
-    $sentencia = $this->db->prepare ( "SELECT * from periferico");
+    $sentencia = $this->db->prepare ( "SELECT * from periferico order by id_tipo");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -50,5 +50,6 @@ class PerifericosModel extends Model{
     $sentencia = $this->db->prepare("DELETE FROM periferico WHERE id=?");
     $sentencia->execute([$id_periferico]);
   }
+
 }
  ?>

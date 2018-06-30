@@ -4,7 +4,13 @@ class PageHelpers
 {
   public static function homePage()
   {
-    header("Location: ".BASEURL."ver");
+    header("Location: ".BASEURL."perifericos");
+    die();
+  }
+
+  public static function categoriasPage()
+  {
+    header("Location: ".BASEURL."categorias");
     die();
   }
 
@@ -27,6 +33,4 @@ class PageHelpers
   }
 
 }
-
-
  ?>

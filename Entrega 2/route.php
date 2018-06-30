@@ -3,6 +3,7 @@
   require_once "config.php";
   require_once "helpers/PageHelpers.php";
   require_once "controller/PerifericosController.php";
+  require_once "controller/CategoriaController.php";
   require_once "controller/PermisosController.php";
   require_once "controller/LoginController.php";
 

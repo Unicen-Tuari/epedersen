@@ -17,26 +17,19 @@
 </div>
 <div class="card">
   <div class="card-body">
-    <h1 class="card-title">Lista de Perifericos</h1>
+    <h1 class="card-title">Lista de Categorias</h1>
     <ul class="list-group">
-      {foreach from=$perifericos item=periferico}
+      {foreach from=$categorias item=categoria}
       <li class="list-group-item">
-        <div class="card-body">
         {if $permiso == "administrador"}
-        <a href="borrarPeriferico/{$periferico['id']}" class="card-link"><button type="button" class="btn btn-primary btn-lg">Borrar</button></a>
+        <a href="borrarCategoria/{$categoria['id']}" class="card-link"><button type="button" class="btn btn-primary btn-lg">Borrar</button></a>
         {/if}
-        <a href="detalle/{$periferico['id']}" class="card-link">{$periferico['titulo']}</a>
-        {foreach from=$tipo item=type}
-          {if $type['id'] == $periferico['id_tipo']}
-            <p class="card-text">Tipo: {$type['nombre']}</p>
-          {/if}
-        {/foreach}
-        </div>
+        <a href="detalleCategoria/{$categoria['id']}" class="card-link">{$categoria['nombre']}</a>
       </li>
       {/foreach}
     </ul>
     {if $permiso == "administrador"}
-    <a href="crearPeriferico" class="btn btn-primary">Crear Periferico</a>
+    <a href="crearCategoria" class="btn btn-primary">Crear Categoria</a>
     {/if}
   </div>
 </div>
