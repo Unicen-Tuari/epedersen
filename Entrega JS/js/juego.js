@@ -49,7 +49,7 @@ Jugar.addEventListener('click', function(e) {
         CantMarcas++;
       }
     }
-    //Si no hay marca en el primero, pongo la marca. 
+    //Si no hay marca en el primero, pongo la marca.
     // if (Marcas[0]==false){
     //   Casillero=document.getElementById(1);
     //   Marcas[0]= true;
@@ -70,7 +70,7 @@ Jugar.addEventListener('click', function(e) {
 
 function numero_random(Probabilidad){
   let n = Math.random();
-  if(n<Probabilidad){
+  if(n>Probabilidad){
     n = Math.floor(n); //redondeo hacia abajo
   }else{
     n = Math.ceil(n); //redondeo hacia arriba

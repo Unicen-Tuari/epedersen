@@ -8,6 +8,12 @@ class PageHelpers
     die();
   }
 
+  public static function PermisosPage()
+  {
+    header("Location: ".BASEURL."permisos");
+    die();
+  }
+
   public static function loginPage()
   {
     header("Location: ".BASEURL."");

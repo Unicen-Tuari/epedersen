@@ -1,13 +1,6 @@
 <?php
-class PerifericosModel{
-
-  private $db;
-
-  function __construct(){
-    $this->db = new PDO('mysql:host=localhost;'
-               .'dbname=bd_perifericos;charset=utf8'
-            , 'root', '');
-  }
+require_once "Model.php";
+class PerifericosModel extends Model{
 
   function obtenerPerifericos()
   {

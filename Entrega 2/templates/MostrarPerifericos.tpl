@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 <div class="card">
   <div class="card-body">
-    <h1 class="card-title">Lista de Perifericos</h5>
+    <h1 class="card-title">Lista de Perifericos</h1>
     <ul class="list-group">
       {foreach from=$perifericos item=periferico}
       <li class="list-group-item">

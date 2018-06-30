@@ -3,7 +3,8 @@
   require_once "config.php";
   require_once "helpers/PageHelpers.php";
   require_once "controller/PerifericosController.php";
-//  require_once "controller/LoginController.php";
+  require_once "controller/PermisosController.php";
+  require_once "controller/LoginController.php";
 
   $params = explode("/", $_GET["action"]); //[batata,1]
   $action = $params[0];
