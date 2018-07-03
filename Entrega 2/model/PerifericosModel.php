@@ -17,7 +17,7 @@ class PerifericosModel extends Model{
   }
 
   function obtenerTiposPerifericos(){
-    $sentencia = $this->db->prepare ( "SELECT * FROM tipo");
+    $sentencia = $this->db->prepare ("SELECT * FROM tipo");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }

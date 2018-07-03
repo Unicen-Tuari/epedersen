@@ -48,7 +48,7 @@ class LoginController extends SecuredController
   {
     session_start();
     session_destroy();
-    header('Location: '.LOGIN);
+    PageHelpers::loginPage();
   }
 }
  ?>
