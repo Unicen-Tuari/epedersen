@@ -1,9 +1,12 @@
 <?php
 require_once "./model/CategoriasModel.php";
 require_once "./view/CategoriasView.php";
-require_once "SecuredController.php";
 
-class CategoriaController extends SecuredController{
+class CategoriaController
+{
+
+private $model;
+private $view;
 
   function __construct(){
 

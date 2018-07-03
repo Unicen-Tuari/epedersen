@@ -1,9 +1,11 @@
 <?php
 require_once "./model/UsuarioModel.php";
 require_once "./view/LoginView.php";
-require_once "SecuredController.php";
-class LoginController extends SecuredController
+
+class LoginController
 {
+  private $model;
+  private $view;
   function __construct()
   {
     $this->view = new LoginView();
@@ -35,7 +37,7 @@ class LoginController extends SecuredController
         if((!empty($user)) && password_verify($password, $user[0]['password'])) {
             session_start();
             $_SESSION['USER'] = $userName;
-            $_SESSION['ADMIN'] = (int) $user[0]['admin'];
+            $_SESSION['ADMIN'] = $user[0]['admin'];
             $_SESSION['LAST_ACTIVITY'] = time();
             PageHelpers::homePage();
         }

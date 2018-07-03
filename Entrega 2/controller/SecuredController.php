@@ -1,7 +1,13 @@
 <?php
-require_once "Controller.php";
-class SecuredController extends Controller
+define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
+define('LOGIN', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/login');
+define('LOGOUT', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/logout');
+
+class SecuredController
 {
+  protected $view;
+  protected $model;
+
   function __construct()
   {
     session_start();

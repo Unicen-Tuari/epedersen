@@ -1,9 +1,11 @@
 <?php
 require_once "./model/PerifericosModel.php";
 require_once "./view/PerifericosView.php";
-require_once "SecuredController.php";
 
-class PerifericosController extends SecuredController{
+class PerifericosController
+{
+  private $model;
+  private $view;
 
   function __construct(){
 

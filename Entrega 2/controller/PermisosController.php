@@ -1,36 +1,38 @@
 <?php
 require_once "./model/UsuarioModel.php";
 require_once "./view/PermisosView.php";
-require_once "SecuredController.php";
 
-class PermisosController extends SecuredController
+
+class PermisosController
 {
-    function __construct()
-    {
-        $this->view = new PermisosView();
-        $this->model = new UsuarioModel();
+  private $model;
+  private $view;
+  function __construct()
+  {
+      $this->view = new PermisosView();
+      $this->model = new UsuarioModel();
+  }
+  public function mostrarUsuarios(){
+    session_start();
+    if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
+      $users = $this->model->getUsers();
+      $this->view->mostrarUsuarios($users);
     }
-    public function mostrarUsuarios(){
-      session_start();
-      if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
-        $users = $this->model->getUsers();
-        $this->view->mostrarUsuarios($users);
-      }
+  }
+  public function actualizarUsuario(){
+    session_start();
+    if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
+      $values = array($_POST['usuario'],(int)$_POST['admin'],(int)$_POST['id']);
+      $this->model->actualizarUsuario($values);
     }
-    public function actualizarUsuario(){
-      session_start();
-      if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
-        $values = array($_POST['usuario'],(int)$_POST['admin'],(int)$_POST['id']);
-        $this->model->actualizarUsuario($values);
-      }
 
-      PageHelpers::PermisosPage();
+    PageHelpers::PermisosPage();
+  }
+  public function borrarUsuario($params = []){
+    session_start();
+    if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
+      $this->model->borrarUsuario([$params[0]]);
     }
-    public function borrarUsuario($params = []){
-      session_start();
-      if(isset($_SESSION['ADMIN']) && $_SESSION['ADMIN'] == 1){
-        $this->model->borrarUsuario([$params[0]]);
-      }
-      PageHelpers::PermisosPage();
-    }
+    PageHelpers::PermisosPage();
+  }
 }
